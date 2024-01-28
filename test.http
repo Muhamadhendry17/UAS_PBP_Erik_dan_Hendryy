@@ -1,0 +1,100 @@
+POST http://localhost:3000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "erik",
+  "password" : "rahasia",
+  "name" : "erik"
+}
+
+###
+
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "erik",
+  "password" : "rahasia"
+}
+
+###
+
+GET http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: ff78f2ec-3b0c-48cb-8857-5ad71ad5661a
+
+###
+
+PATCH http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: ff78f2ec-3b0c-48cb-8857-5ad71ad5661a
+
+{
+  "name" : "saya"
+}
+
+###
+
+DELETE http://localhost:3000/api/users/logout
+Content-Type: application/json
+Accept: application/json
+Authorization: ff78f2ec-3b0c-48cb-8857-5ad71ad5661a
+
+###
+
+POST http://localhost:3000/api/cards
+Content-Type: application/json
+Accept: application/json
+Authorization: 4b5d0aad-631b-4835-8f50-227211f84afb
+
+{
+  "name": "ugan",
+  "nik": "2020202023",
+  "tempatlahir": "sukabumi",
+  "jeniskelamin": "lakilaki",
+  "alamat": "cibadak",
+  "agama": "islam"
+}
+
+
+###
+
+GET http://localhost:3000/api/cards
+Content-Type: application/json
+Accept: application/json
+Authorization:  4b5d0aad-631b-4835-8f50-227211f84afb
+
+
+###
+
+GET http://localhost:3000/api/cards/2
+Content-Type: application/json
+Accept: application/json
+Authorization: 46e8b58e-69bc-40d6-91c8-16014a14a56b
+
+###
+
+PUT http://localhost:3000/api/cards/2
+Content-Type: application/json
+Accept: application/json
+Authorization: fbabc23e-df0c-4d6f-955d-ea8aa2a1c608
+
+{
+  "name": "hendry",
+  "nik": "2020202021",
+  "tempatlahir": "sukabumi",
+  "jeniskelamin": "lakilaki",
+  "alamat": "kp.cibitung",
+  "agama": "islam"
+}
+
+###
+
+DELETE http://localhost:3000/api/cards/9
+Content-Type: application/json
+Accept: application/json
+Authorization: 4b5d0aad-631b-4835-8f50-227211f84afb
